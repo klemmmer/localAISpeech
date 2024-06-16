@@ -1,0 +1,9 @@
+name: ava-llama-3-8b-v1_1
+context_size: 2048
+f16: true
+threads: 11
+gpu_layers: 1
+mmap: true
+parameters:
+  # Reference any HF model or a local file here
+  model: llava-llama-3-8b-v1_1
