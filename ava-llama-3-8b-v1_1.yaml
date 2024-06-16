@@ -1,8 +1,5 @@
 name: phi-2
-context_size: 2048
-f16: true
-threads: 11
-gpu_layers: 1
+gpu_layers: 22
 mmap: true
 parameters:
   # Reference any HF model or a local file here
