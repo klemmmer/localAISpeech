@@ -1,4 +1,4 @@
-name: ava-llama-3-8b-v1_1
+name: phi-2
 context_size: 2048
 f16: true
 threads: 11
@@ -6,4 +6,14 @@ gpu_layers: 1
 mmap: true
 parameters:
   # Reference any HF model or a local file here
-  model: llava-llama-3-8b-v1_1
+  model: huggingface://TheBloke/phi-2-GGUF/phi-2.Q8_0.gguf
+  temperature: 0.2
+  top_k: 40
+  top_p: 0.95
+template:
+
+  chat: &template |
+    Instruct: {{.Input}}
+    Output:
+  # Modify the prompt template here ^^^ as per your requirements
+  completion: *template
